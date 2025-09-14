@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shopping Cart Simulation</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:,">
+</head>
+<body>
+  <header class="topbar">
+    <h1>ShopSim</h1>
+    <div class="search-wrap">
+      <input id="searchInput" type="search" placeholder="Search products..." />
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="products-section">
+      <h2>Products</h2>
+      <div id="productsGrid" class="products-grid" aria-live="polite"></div>
+    </section>
+
+    <aside class="cart-section">
+      <h2>Your Cart</h2>
+      <div id="cartContainer" class="cart-container"></div>
+
+      <div class="cart-summary">
+        <div class="summary-row">
+          <span>Total items:</span><span id="totalItems">0</span>
+        </div>
+        <div class="summary-row total-price">
+          <span>Total price:</span><span id="totalPrice">$0.00</span>
+        </div>
+        <button id="clearCartBtn" class="btn btn-danger">Clear Cart</button>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Toast / success message -->
+  <div id="toast" class="toast" aria-live="assertive" role="status"></div>
+
+  <footer class="footer">
+    <small>shopsim designed by Rona Jami</small>
+  </footer>
+
+  <script src="script.js" type="module"></script>
+</body>
+</html>
